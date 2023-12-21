@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class BigSumController {
 
   @GetMapping("/big-sum")
-  public BigInteger sumBigInteger(@RequestParam(name = "a")BigInteger a, @RequestParam(name = "b")BigInteger b) {
+  public BigInteger sumBigInteger(
+      @RequestParam(name = "a") BigInteger a, @RequestParam(name = "b") BigInteger b) {
     return a.add(b);
   }
 }
